@@ -10,15 +10,6 @@ var PRODUCT_PROP_PATHS = {
   productCategory: '$..*[?(@ === \'_pkc\')]',
 };
 
-var parsePromise = function(data, path) {
-  return utils.PromisifiedJSONPath({
-      json: data,
-      path: path,
-      resultType: 'parent',
-      wrap: false
-    });
-};
-
 function ProductDetailPageViewEventParser(dataToParse) {
   AbstractParser.call(this, dataToParse);
   return this;
@@ -26,12 +17,11 @@ function ProductDetailPageViewEventParser(dataToParse) {
 ProductDetailPageViewEventParser.prototype = Object.create(AbstractParser.prototype);
 ProductDetailPageViewEventParser.prototype.constructor = ProductDetailPageViewEventParser;
 
-ProductDetailPageViewEventParser.prototype.parse = function(dataToParse) {
-  var data = dataToParse || this.data || {};
+ProductDetailPageViewEventParser.prototype.doParse = function(data) {
   var properties = {
-      name: parsePromise(data, PRODUCT_PROP_PATHS.productName),
-      sku: parsePromise(data, PRODUCT_PROP_PATHS.productSku),
-      category: parsePromise(data, PRODUCT_PROP_PATHS.productCategory),
+      name: utils.parsePromise(data, PRODUCT_PROP_PATHS.productName),
+      sku: utils.parsePromise(data, PRODUCT_PROP_PATHS.productSku),
+      category: utils.parsePromise(data, PRODUCT_PROP_PATHS.productCategory),
     };
   return Promise.all([properties.name, properties.sku, properties.category])
     .then(this.serialize);

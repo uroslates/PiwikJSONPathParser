@@ -18,6 +18,16 @@ var PromisifiedJSONPath = function(config) {
   });
 };
 
+var parsePromise = function(data, path) {
+  return PromisifiedJSONPath({
+      json: data,
+      path: path,
+      resultType: 'parent',
+      wrap: false
+    });
+};
+
 module.exports = {
-  PromisifiedJSONPath: PromisifiedJSONPath
+  PromisifiedJSONPath: PromisifiedJSONPath,
+  parsePromise: parsePromise
 };

@@ -1,0 +1,96 @@
+{
+  "action_name": "OrderDetailEvent",
+  "idsite": "1",
+  "rec": "1",
+  "r": "469869",
+  "h": "13",
+  "m": "1",
+  "s": "51",
+  "url": "http://somestore.yaas.io/#!/products/550179c138ae86edc6725ef7/",
+  "_id": "93337f761afbab86",
+  "_idts": "1425374194",
+  "_idvc": "18",
+  "_idn": "0",
+  "_refts": "0",
+  "_viewts": "1426090398",
+  "_ects": "1425390712",
+  "pdf": "1",
+  "qt": "0",
+  "realp": "0",
+  "wma": "0",
+  "dir": "0",
+  "fla": "1",
+  "java": "1",
+  "gears": "0",
+  "ag": "1",
+  "cookie": "1",
+  "res": "1920x1200",
+  "cvar": {
+    "channelRef": "webshop1",
+    "date": "2015-11-25T10:08:21+00:00",
+    "type": "order",
+    "consumer": {
+      "ref": "someone@mail.com",
+      "type": "email"
+    },
+    "body": {
+      "lineItems": [
+        {
+          "ref": "ABCDEF1",
+          "type": "Product",
+          "pos": 1,
+          "quantity": 5,
+          "unit": "kg",
+          "price_list": "17.00",
+          "price_effective": "15.00",
+          "currency": "EUR",
+          "taxAmount": "17%",
+          "status": "cancellation requested"
+        },
+        {
+          "ref": "ABCDEF2",
+          "type": "Product",
+          "pos": 2,
+          "quantity": 1,
+          "unit": "piece",
+          "price_list": "99.00",
+          "price_effective": "99.00",
+          "currency": "EUR",
+          "taxAmount": "17%",
+          "status": "pre-order"
+        }
+      ],
+      "promotionInfo": [
+        {
+          "ref": "xmas2015abc",
+          "type": "absolute reduction"
+        }
+      ],
+      "paymentInfo": {
+        "paymentType": "Master",
+        "status": "requested"
+      },
+      "status": "new",
+      "date": "2015-11-25T10:08:21+00:00",
+      "orderId": "12a",
+      "shipmentInfo": {
+        "address": {
+          "firstName": "Sebastia",
+          "lastName": "Mahra",
+          "addition": "c/o hybris GmbH",
+          "street": "Nymphenburger Str.",
+          "number": "86",
+          "ZIP": "80636",
+          "city": "Munich",
+          "country": "Germany"
+        },
+        "carrier": "UPS",
+        "trackingRef": "abc123XYZ",
+        "status": "not delivered"
+      },
+      "orderValue": "114.00",
+      "currency": "EUR"
+    }
+  },
+  "gt_ms": "13"
+}
